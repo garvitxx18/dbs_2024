@@ -13,7 +13,7 @@ public class Product {
 		super();
 	}
 
-	public Product(int productId, String productName, double ratePerUnit) throws Exception {
+	public Product(int productId, String productName, double ratePerUnit) throws RangeCheckException {
 		super();
 		this.productId = productId;
 		this.productName = productName;
@@ -62,9 +62,8 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return this.productId+","+this.productName +"," +this.ratePerUnit;
+		return  this.productId+","+ this.productName +"," +this.ratePerUnit;
 	}
-
 	
 	
 	

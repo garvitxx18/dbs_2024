@@ -3,20 +3,19 @@ package com.example.demo.services;
 import java.util.List;
 
 import com.example.demo.ifaces.CrudRepository;
-import com.example.demo.ifaces.SortingRepository;
 import com.example.demo.impl.CrudRepositoryImpl;
 import com.example.demo.model.Product;
 
 public class ProductService {
 
 	
-	private SortingRepository repo;
+	private CrudRepository repo;
 	
 	
 	
 
 
-	public ProductService(SortingRepository repo) {
+	public ProductService(CrudRepository repo) {
 		
 		super();
 		
@@ -34,10 +33,5 @@ public class ProductService {
 	public List<Product> findAll() {
 		
 		return this.repo.findAll();
-	}
-
-
-	public List<Product> sort(String string) {
-		return this.repo.sort(string);
 	}
 }
